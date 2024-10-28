@@ -1,6 +1,5 @@
 # from matplotlib.widgets import Cursor
 import streamlit as st
-import pyodbc
 from Pages.Operator import operator_screen
 from Pages.Technisian import technisian_screen
 
