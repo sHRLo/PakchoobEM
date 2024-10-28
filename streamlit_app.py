@@ -1,28 +1,6 @@
-# from matplotlib.widgets import Cursor
 import streamlit as st
 from Pages.Operator import operator_screen
 from Pages.Technisian import technisian_screen
-
-
-# Database connection
-# conn = pyodbc.connect(
-#     'DRIVER={ODBC Driver 17 for SQL Server};'
-#     'SERVER=10.0.1.7\\bi;'
-#     'DATABASE=PM;'
-#     'UID=Reza;'
-#     'PWD=Re@123456'
-# )
-# cursor = conn.cursor()
-
-# Function to authenticate user
-def authenticate(username, password):
-    cursor.execute('SELECT username, password, role FROM dbo.Login WHERE username = ? AND password = ?',
-    (username, password))
-    user = cursor.fetchone()
-    if user:
-        return user[2]  # Return the role of the user
-    return None
-
 
 # Define the pages
 def admin_page():
