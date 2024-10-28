@@ -1,4 +1,4 @@
-from matplotlib.widgets import Cursor
+# from matplotlib.widgets import Cursor
 import streamlit as st
 import pyodbc
 from Pages.Operator import operator_screen
@@ -17,9 +17,9 @@ from Pages.Technisian import technisian_screen
 
 # Function to authenticate user
 def authenticate(username, password):
-    Cursor.execute('SELECT username, password, role FROM dbo.Login WHERE username = ? AND password = ?',
+    cursor.execute('SELECT username, password, role FROM dbo.Login WHERE username = ? AND password = ?',
     (username, password))
-    user = Cursor.fetchone()
+    user = cursor.fetchone()
     if user:
         return user[2]  # Return the role of the user
     return None
